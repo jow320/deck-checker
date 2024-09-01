@@ -27,10 +27,6 @@ A web application for managing your Magic: The Gathering card collection. This a
 
 Developed by [João Victor Estevan](https://github.com/jow320).
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ## Demo
 
 You can try out the live demo [here](#).
