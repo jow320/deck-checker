@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const missingForm = document.getElementById("missing-form");
   const missingInput = document.getElementById("missing-input");
   const missingOutput = document.getElementById("missing-output");
+  const updateCollectionButton = document.getElementById("update-collection");
 
   // Função para recuperar a coleção do Local Storage
   function getCollection() {
@@ -68,6 +69,27 @@ document.addEventListener("DOMContentLoaded", function () {
              "\n"
            )}</textarea>`
         : "<h3>Você possui todas as cartas da lista!</h3>";
+
+    // Adiciona imagens das cartas faltantes
+    const missingImageContainer = document.createElement("div");
+    missingImageContainer.id = "missing-images";
+    missingOutput.appendChild(missingImageContainer);
+
+    const images = await Promise.all(
+      missingCards.slice(0, 6).map(async (card) => {
+        const imageUrl = await fetchCardImage(card);
+        return imageUrl;
+      })
+    );
+
+    images.forEach((imageUrl) => {
+      const imgElement = document.createElement("img");
+      imgElement.src = imageUrl;
+      imgElement.alt = "Carta Faltante";
+      imgElement.style.width = "100px";
+      imgElement.style.margin = "10px";
+      missingImageContainer.appendChild(imgElement);
+    });
   });
 
   // Função para analisar a lista de cartas
@@ -78,13 +100,10 @@ document.addEventListener("DOMContentLoaded", function () {
       .filter((line) => line !== "");
   }
 
-  // Função para buscar o preço da carta
-  async function fetchCardPrice(cardName) {
+  // Função para buscar a imagem da carta
+  async function fetchCardImage(cardName) {
     try {
-      // Remove números e caracteres desnecessários do nome da carta
       const cleanCardName = cardName.replace(/^\d+\s*/, "");
-
-      // Primeiro, tenta buscar o nome exato da carta
       let response = await fetch(
         `https://api.scryfall.com/cards/named?exact=${encodeURIComponent(
           cleanCardName
@@ -92,37 +111,26 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       let data = await response.json();
 
-      // Verifica se a resposta contém o preço
-      if (data && data.prices && data.prices.usd) {
-        return parseFloat(data.prices.usd);
+      if (data && data.image_uris && data.image_uris.normal) {
+        return data.image_uris.normal;
       } else {
-        // Se não encontrar, tenta buscar por um nome mais genérico ou por consulta de busca
-        response = await fetch(
-          `https://api.scryfall.com/cards/search?q=${encodeURIComponent(
-            cleanCardName
-          )}`
-        );
-        data = await response.json();
-
-        // Verifica a primeira carta na resposta da busca
-        if (
-          data &&
-          data.data &&
-          data.data.length > 0 &&
-          data.data[0].prices &&
-          data.data[0].prices.usd
-        ) {
-          return parseFloat(data.data[0].prices.usd);
-        }
+        return "linkuriboh.png"; // Imagem padrão caso não encontre a carta
       }
-
-      // Se não encontrar o preço, retorna null
-      return null;
     } catch (error) {
-      console.error("Erro ao buscar preço da carta:", error);
-      return null;
+      console.error("Erro ao buscar imagem da carta:", error);
+      return "linkuriboh.png";
     }
   }
+
+  // Função para atualizar a coleção a partir do editor
+  updateCollectionButton.addEventListener("click", function () {
+    const newCollection = collectionEditor.value
+      .split("\n")
+      .map((card) => card.trim())
+      .filter((card) => card !== "");
+    saveCollection(newCollection);
+    collection = newCollection;
+  });
 
   // Inicializa a exibição da coleção
   collectionEditor.value = getCollection().join("\n");
