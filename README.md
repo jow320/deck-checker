@@ -1,10 +1,5 @@
 # Magic: The Gathering - Card Manager
 
-![GitHub repo size](https://img.shields.io/github/repo-size/jow320/mtg-card-manager)
-![GitHub language count](https://img.shields.io/github/languages/count/jow320/mtg-card-manager)
-![GitHub top language](https://img.shields.io/github/languages/top/jow320/mtg-card-manager)
-![GitHub license](https://img.shields.io/github/license/jow320/mtg-card-manager)
-
 A web application for managing your Magic: The Gathering card collection. This app allows you to add, view, and check cards in your collection, and identify which cards you do not own. It features a responsive design, dark mode, and language toggle between Portuguese and English.
 
 ## Features
