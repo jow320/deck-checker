@@ -29,7 +29,7 @@ Developed by [João Victor Estevan](https://github.com/jow320).
 
 ## Demo
 
-You can try out the live demo [here](#).
+You can try out the live demo [here](https://jow320.github.io/deck-checker/).
 
 ---
 
