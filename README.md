@@ -12,9 +12,9 @@ A web application for managing your Magic: The Gathering card collection. This a
 
 ## Technologies Used
 
-- ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat&logo=html5&logoColor=white) HTML
-- ![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat&logo=css3&logoColor=white) CSS
-- ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1C.svg?style=flat&logo=javascript&logoColor=black) JavaScript
+- ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat&logo=html5&logoColor=white) 
+- ![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat&logo=css3&logoColor=white) 
+- ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1C.svg?style=flat&logo=javascript&logoColor=black) 
 - [Scryfall API](https://scryfall.com) for card data
 
 ## How to Use
