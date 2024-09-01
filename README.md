@@ -7,8 +7,8 @@ A web application for managing your Magic: The Gathering card collection. This a
 - **Add Cards**: Input a list of cards in the format `1 Sol Ring`, `1 Arcane Signet`, etc., to add to your collection.
 - **Check Missing Cards**: See which cards are missing from your collection.
 - **Search Cards**: Find specific cards in your collection.
-- **Dark Mode**: Toggle between light and dark mode.
-- **Language Toggle**: Switch between Portuguese and English.
+- **Dark Mode**: Toggle between light and dark mode.(Future)
+- **Language Toggle**: Switch between Portuguese and English.(Future)
 
 ## Technologies Used
 
