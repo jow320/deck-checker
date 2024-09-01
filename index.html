@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magic: The Gathering Collection</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#features">Funcionalidades</a></li>
+          <li><a href="#usage">Como Utilizar</a></li>
+          <li><a href="#about">Sobre o Desenvolvedor</a></li>
+        </ul>
+      </nav>
+      <div class="hero-content">
+        <h1>MTG Collection Manager</h1>
+        <p>
+          Gerencie e visualize sua coleção de cartas de Magic: The Gathering de
+          forma prática e eficiente.
+        </p>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="features" class="section">
+        <h2>Funcionalidades</h2>
+        <div class="form">
+          <form id="card-form">
+            <textarea
+              id="card-input"
+              placeholder="Adicione suas cartas aqui... (1 Sol Ring, 1 Arcane Signet, etc.)"
+            ></textarea>
+            <button type="submit">Adicionar Cartas</button>
+          </form>
+        </div>
+
+        <button id="toggle-collection" class="btn-primary">
+          Mostrar/Esconder Coleção
+        </button>
+
+        <div id="collection-container" class="collection-container">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Busque na sua coleção..."
+          />
+          <textarea id="collection-editor" readonly></textarea>
+        </div>
+
+        <div class="form">
+          <form id="missing-form">
+            <textarea
+              id="missing-input"
+              placeholder="Verifique quais cartas você não possui... (1 Sol Ring, 1 Arcane Signet, etc.)"
+            ></textarea>
+            <button type="submit">Verificar</button>
+          </form>
+        </div>
+
+        <div id="missing-output"></div>
+      </section>
+
+      <section id="usage" class="section">
+        <h2>Como Utilizar</h2>
+        <p>
+          Para adicionar cartas, insira uma lista de cartas no formato '1 Sol
+          Ring', '1 Arcane Signet', etc., e clique em 'Adicionar Cartas'.
+        </p>
+        <p>
+          Para verificar quais cartas você não possui, insira uma lista de
+          cartas e clique em 'Verificar'.
+        </p>
+        <p>
+          Use a busca para encontrar cartas específicas na sua coleção e
+          visualize os preços ao passar o mouse sobre o nome da carta.
+        </p>
+      </section>
+
+      <section id="about" class="section">
+        <h2>Sobre o Desenvolvedor</h2>
+        <p>Desenvolvido por João Victor Estevan.</p>
+        <p>
+          Você pode encontrar mais sobre mim e meus projetos no meu
+          <a href="https://github.com/jow320" target="_blank">GitHub</a>.
+        </p>
+        <h3>Tecnologias Utilizadas</h3>
+        <div class="tech-icons">
+          <i class="fab fa-html5" title="HTML5"></i>
+          <i class="fab fa-css3-alt" title="CSS3"></i>
+          <i class="fab fa-js-square" title="JavaScript"></i>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 João Victor Estevan. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
