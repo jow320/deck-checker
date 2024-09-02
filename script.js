@@ -61,13 +61,16 @@ document.addEventListener("DOMContentLoaded", function () {
       (card) => !collection.includes(card)
     );
 
+    const missingCount = missingCards.length;
+
     // Exibe a lista de cartas que não estão na coleção, sem preços
     missingOutput.innerHTML =
       missingCards.length > 0
         ? `<h3>Cartas que você não possui:</h3>
            <textarea id="missing-list-editor">${missingCards.join(
              "\n"
-           )}</textarea>`
+           )}</textarea>
+           <p>Faltam ${missingCount} cartas.</p>`
         : "<h3>Você possui todas as cartas da lista!</h3>";
 
     // Adiciona imagens das cartas faltantes
