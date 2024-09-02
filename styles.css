@@ -2,11 +2,11 @@
 
 /* Global Styles */
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
-  background-color: #2c2c2c; /* Background color altered to darker shade */
+  background-color: #2c2c2c;
 }
 
 a {
@@ -69,11 +69,11 @@ nav {
 
 /* Main Content Area */
 .form {
-  background-color: rgba(255, 255, 255, 0.1); /* More transparent background */
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly darker shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 textarea,
@@ -82,9 +82,9 @@ input {
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #555; /* Darker border */
-  background-color: #444; /* Darker input background */
-  color: #fff; /* White text */
+  border: 1px solid #555;
+  background-color: #444;
+  color: #fff;
 }
 
 button {
@@ -126,23 +126,44 @@ button:hover {
 
 /* Sections */
 .section {
-  padding: 40px;
+  background: #444;
+  border-radius: 12px;
+  padding: 30px;
   margin: 20px 0;
-  background: #333; /* Darker section background */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly darker shadow */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  color: #f5f5f5;
   text-align: center;
 }
 
 .section h2 {
-  margin-bottom: 20px;
-  font-size: 2em;
-  color: #fff; /* White section titles */
+  font-size: 2.2em;
+  color: #f8f8f8;
+  margin-bottom: 15px;
 }
 
 .section p {
-  line-height: 1.6;
-  color: #ddd; /* Light grey text */
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.section a {
+  display: inline-block;
+  color: #f8f8f8;
+  font-size: 2em;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.section a:hover {
+  color: #007bff;
+}
+
+.section .github-icon {
+  font-size: 2em;
+  margin-top: 15px;
 }
 
 ul {
@@ -174,10 +195,10 @@ ul li {
 
 /* Footer */
 footer {
-  background-color: #1c1c1c; /* Darker footer background */
+  background-color: #1c1c1c;
   padding: 20px 0;
   text-align: center;
-  color: #ccc; /* Light grey text */
+  color: #ccc;
 }
 
 footer p {

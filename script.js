@@ -117,11 +117,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (data && data.image_uris && data.image_uris.normal) {
         return data.image_uris.normal;
       } else {
-        return "linkuriboh.png"; // Imagem padrão caso não encontre a carta
+        return "https://www.duelshop.com.br/15246-large_default/op09-en004-morphing-jar-super-rare.jpg";
       }
     } catch (error) {
       console.error("Erro ao buscar imagem da carta:", error);
-      return "linkuriboh.png";
+      return "https://www.duelshop.com.br/15246-large_default/op09-en004-morphing-jar-super-rare.jpg";
     }
   }
 
