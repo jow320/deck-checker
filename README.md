@@ -7,15 +7,14 @@ A web application for managing your Magic: The Gathering card collection. This a
 - **Add Cards**: Input a list of cards in the format `1 Sol Ring`, `1 Arcane Signet`, etc., to add to your collection.
 - **Check Missing Cards**: See which cards are missing from your collection.
 - **Search Cards**: Find specific cards in your collection.
-- **Dark Mode**: Toggle between light and dark mode.(Future)
-- **Language Toggle**: Switch between Portuguese and English.(Future)
+
 
 ## Technologies Used
 
 - ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat&logo=html5&logoColor=white) 
 - ![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat&logo=css3&logoColor=white) 
 - ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1C.svg?style=flat&logo=javascript&logoColor=black) 
-- [Scryfall API](https://scryfall.com) for card data
+- [Scryfall API](https://scryfall.com) for card images
 
 ## How to Use
 
@@ -27,9 +26,9 @@ A web application for managing your Magic: The Gathering card collection. This a
 
 Developed by [João Victor Estevan](https://github.com/jow320).
 
-## Demo
+## Release
 
-You can try out the live demo [here](https://jow320.github.io/deck-checker/).
+You can try out the 1.0 release [here](https://jow320.github.io/deck-checker/).
 
 ---
 
