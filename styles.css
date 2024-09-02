@@ -76,6 +76,17 @@ nav {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+.form button a {
+  padding: 0px;
+  color: #fff;
+  font-size: small;
+  text-decoration: none;
+}
+
+.form button a:hover {
+  text-decoration: underline;
+}
+
 textarea,
 input {
   width: calc(100% - 20px);
